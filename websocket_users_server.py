@@ -6,7 +6,7 @@ from websockets import ServerConnection
 
 # Обработчик входящих сообщений
 async def echo(websocket: ServerConnection):
-    count=1
+    count = 1
     async for message in websocket:
         print(f"Получено сообщение от пользователя: {message}")
         for i in range(5):

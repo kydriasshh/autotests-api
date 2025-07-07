@@ -8,7 +8,7 @@ async def client():
     async with websockets.connect(uri) as websocket:
         message = "Привет, сервер!"  # Сообщение, которое отправит клиент
         print(f"Отправка: {message}")
-        await websocket.send(message) # Отправляем сообщение
+        await websocket.send(message)  # Отправляем сообщение
 
         for _ in range(5):
             message = await websocket.recv()
